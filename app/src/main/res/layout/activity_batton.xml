@@ -7,26 +7,68 @@
     tools:context=".BattonActivity">
 
     <ImageButton
-        android:id="@+id/imageButtonHaracter"
-        android:layout_width="330dp"
-        android:layout_height="174dp"
-        app:srcCompat="@drawable/grafik"
-        tools:layout_editor_absoluteX="43dp"
-        tools:layout_editor_absoluteY="70dp" />
+        android:id="@+id/imageButtonHaracters"
+        android:layout_width="340dp"
+        android:layout_height="200dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/imageButtonLocations"
+        app:srcCompat="@drawable/grafik" />
 
     <ImageButton
-        android:id="@+id/imageButtonLocation"
-        android:layout_width="343dp"
-        android:layout_height="192dp"
-        app:srcCompat="@drawable/grafik"
-        tools:layout_editor_absoluteX="43dp"
-        tools:layout_editor_absoluteY="329dp" />
+        android:id="@+id/imageButtonLocations"
+        android:layout_width="340dp"
+        android:layout_height="200dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageButtonQuotes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonHaracters"
+        app:srcCompat="@drawable/grafik" />
 
     <ImageButton
         android:id="@+id/imageButtonQuotes"
-        android:layout_width="307dp"
-        android:layout_height="185dp"
-        app:srcCompat="@drawable/grafik"
-        tools:layout_editor_absoluteX="67dp"
-        tools:layout_editor_absoluteY="530dp" />
+        android:layout_width="340dp"
+        android:layout_height="200dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageButtonLocations"
+        app:srcCompat="@drawable/grafik" />
+
+    <TextView
+        android:id="@+id/buttonTextHaracters"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ПЕРСОНАЖИ"
+        android:textColor="#E81A1A"
+        android:textSize="40dp"
+        app:layout_constraintBottom_toBottomOf="@id/imageButtonHaracters"
+        app:layout_constraintLeft_toLeftOf="@id/imageButtonHaracters"
+        app:layout_constraintRight_toRightOf="@id/imageButtonHaracters"
+        app:layout_constraintTop_toTopOf="@id/imageButtonHaracters" />
+
+    <TextView
+        android:id="@+id/buttonTextLocations"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="МЕСТА"
+        android:textColor="#E81A1A"
+        android:textSize="40dp"
+        app:layout_constraintBottom_toBottomOf="@id/imageButtonLocations"
+        app:layout_constraintLeft_toLeftOf="@id/imageButtonLocations"
+        app:layout_constraintRight_toRightOf="@id/imageButtonLocations"
+        app:layout_constraintTop_toTopOf="@id/imageButtonLocations" />
+
+    <TextView
+        android:id="@+id/buttonTextQuotes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ФРАЗЫ"
+        android:textColor="#E81A1A"
+        android:textSize="40dp"
+        app:layout_constraintBottom_toBottomOf="@id/imageButtonQuotes"
+        app:layout_constraintLeft_toLeftOf="@id/imageButtonQuotes"
+        app:layout_constraintRight_toRightOf="@id/imageButtonQuotes"
+        app:layout_constraintTop_toTopOf="@id/imageButtonQuotes" />
 </androidx.constraintlayout.widget.ConstraintLayout>
