@@ -4,16 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#2E2B78"
+    android:backgroundTint="#CDDC39"
+    android:backgroundTintMode="multiply"
+    android:theme="@android:style/Theme.Black.NoTitleBar"
     tools:context=".BattonActivity">
 
     <ImageButton
         android:id="@+id/imageButtonHaracters"
         android:layout_width="340dp"
         android:layout_height="200dp"
+        app:layout_constraintBottom_toTopOf="@id/imageButtonLocations"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/imageButtonLocations"
         app:srcCompat="@drawable/grafik" />
 
     <ImageButton

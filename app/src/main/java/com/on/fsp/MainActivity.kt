@@ -14,9 +14,7 @@ class MainActivity : AppCompatActivity() {
 
         val butn = findViewById<ImageButton>(R.id.mainActivityButton)
         butn!!.setOnClickListener(View.OnClickListener {
-
             val data = Intent(this ,BattonActivity::class.java)
-
             startActivity(data)
         })
     }
