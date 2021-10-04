@@ -14,40 +14,45 @@
         android:id="@+id/imageButtonHaracters"
         android:layout_width="340dp"
         android:layout_height="200dp"
+        android:scaleType="centerCrop"
         app:layout_constraintBottom_toTopOf="@id/imageButtonLocations"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/grafik" />
+        app:srcCompat="@drawable/fsharacters1" />
 
     <ImageButton
         android:id="@+id/imageButtonLocations"
         android:layout_width="340dp"
         android:layout_height="200dp"
+        android:scaleType="centerCrop"
         app:layout_constraintBottom_toTopOf="@+id/imageButtonQuotes"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageButtonHaracters"
-        app:srcCompat="@drawable/grafik" />
+        app:srcCompat="@drawable/fslocations2" />
 
     <ImageButton
         android:id="@+id/imageButtonQuotes"
         android:layout_width="340dp"
         android:layout_height="200dp"
+        android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/imageButtonLocations"
-        app:srcCompat="@drawable/grafik" />
+        app:srcCompat="@drawable/fsquotes2" />
 
     <TextView
         android:id="@+id/buttonTextHaracters"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
         android:text="ПЕРСОНАЖИ"
-        android:textColor="#E81A1A"
+        android:textColor="#7FF34E"
         android:textSize="40dp"
-        app:layout_constraintBottom_toBottomOf="@id/imageButtonHaracters"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButtonHaracters"
         app:layout_constraintLeft_toLeftOf="@id/imageButtonHaracters"
         app:layout_constraintRight_toRightOf="@id/imageButtonHaracters"
         app:layout_constraintTop_toTopOf="@id/imageButtonHaracters" />
@@ -56,9 +61,11 @@
         android:id="@+id/buttonTextLocations"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
         android:text="МЕСТА"
-        android:textColor="#E81A1A"
+        android:textColor="#EF2F2F"
         android:textSize="40dp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@id/imageButtonLocations"
         app:layout_constraintLeft_toLeftOf="@id/imageButtonLocations"
         app:layout_constraintRight_toRightOf="@id/imageButtonLocations"
@@ -68,9 +75,11 @@
         android:id="@+id/buttonTextQuotes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
         android:text="ФРАЗЫ"
-        android:textColor="#E81A1A"
+        android:textColor="#E8B51A"
         android:textSize="40dp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@id/imageButtonQuotes"
         app:layout_constraintLeft_toLeftOf="@id/imageButtonQuotes"
         app:layout_constraintRight_toRightOf="@id/imageButtonQuotes"
