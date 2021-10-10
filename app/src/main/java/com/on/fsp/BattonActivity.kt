@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.ImageButton
 import com.on.fsp.ui.main.MainFragment
+import com.on.fsp.utils.Resource
 
 class BattonActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,11 +16,15 @@ class BattonActivity : AppCompatActivity() {
         val butHaracters = findViewById<ImageButton>(R.id.imageButtonHaracters)
         butHaracters!!.setOnClickListener(View.OnClickListener {
             println("###### butHaracters")
-            if (savedInstanceState == null) {
-                supportFragmentManager.beginTransaction()
-                    .replace(R.id.container, MainFragment.newInstance())
-                    .commitNow()
-            }
+           // try {
+                if (savedInstanceState == null) {
+                    supportFragmentManager.beginTransaction()
+                        .replace(R.id.container, MainFragment.newInstance())
+                        .commitNow()
+                }
+            /*}catch (exception: Exception) {
+                println("#########Resource.Exception");
+            }*/
 
         })
         val butLocations = findViewById<ImageButton>(R.id.imageButtonLocations)
