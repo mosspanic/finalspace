@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/userAvatar"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_margin="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/userName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/userAvatar"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="User \nname" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/userStatus"
+        android:layout_width="312dp"
+        android:layout_height="20dp"
+        android:layout_margin="16dp"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textStatus"
+        app:layout_constraintTop_toBottomOf="@id/userAvatar" />
+
+    <TextView
+        android:id="@+id/textStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Статус"
+        app:layout_constraintBottom_toBottomOf="@+id/userStatus"
+        app:layout_constraintEnd_toStartOf="@id/userStatus"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/userStatus" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/userSpecies"
+        android:layout_width="312dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textSpecies"
+        app:layout_constraintTop_toBottomOf="@id/userStatus" />
+
+    <TextView
+        android:id="@+id/textSpecies"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Роль"
+        app:layout_constraintEnd_toStartOf="@id/userSpecies"
+        app:layout_constraintTop_toTopOf="@+id/userSpecies"
+        app:layout_constraintBottom_toBottomOf="@+id/userSpecies"
+        app:layout_constraintHorizontal_bias="0.181"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="712dp" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/userGender"
+        android:layout_width="312dp"
+        android:layout_height="24dp"
+        android:layout_margin="16dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/userSpecies" />
+    <TextView
+        android:id="@+id/textGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Пол"
+        app:layout_constraintEnd_toStartOf="@id/userGender"
+        app:layout_constraintTop_toTopOf="@+id/userGender"
+        app:layout_constraintBottom_toBottomOf="@+id/userGender"
+        app:layout_constraintHorizontal_bias="0.181"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="712dp" />
+
+    <com.google.android.material.textview.MaterialTextView
+    android:id="@+id/userHair"
+    android:layout_width="312dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    android:textColor="@color/black"
+    android:textSize="16sp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toEndOf="@+id/textHair"
+    app:layout_constraintTop_toBottomOf="@id/userGender"
+        />
+    <TextView
+        android:id="@+id/textHair"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Волосы"
+        app:layout_constraintEnd_toStartOf="@id/userHair"
+        app:layout_constraintTop_toTopOf="@+id/userHair"
+        app:layout_constraintBottom_toBottomOf="@+id/userHair"
+        app:layout_constraintHorizontal_bias="0.181"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="712dp" />
+    <com.google.android.material.textview.MaterialTextView
+    android:id="@+id/userOrigin"
+    android:layout_width="312dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    android:textColor="@color/black"
+    android:textSize="16sp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toEndOf="textOrigin"
+    app:layout_constraintTop_toBottomOf="@id/userHair"
+        />
+    <TextView
+        android:id="@+id/textOrigin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Происхождение"
+        app:layout_constraintEnd_toStartOf="@id/userOrigin"
+        app:layout_constraintTop_toTopOf="@+id/userOrigin"
+        app:layout_constraintBottom_toBottomOf="@+id/userOrigin"
+        app:layout_constraintHorizontal_bias="0.181"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="712dp" />
+    <com.google.android.material.textview.MaterialTextView
+    android:id="@+id/userAbilities"
+    android:layout_width="312dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    android:textColor="@color/black"
+    android:textSize="16sp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toEndOf="textAbilities"
+    app:layout_constraintTop_toBottomOf="@id/userOrigin"
+    />
+    <TextView
+        android:id="@+id/textAbilities"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Способности"
+        app:layout_constraintEnd_toStartOf="@id/userAbilities"
+        app:layout_constraintTop_toTopOf="@+id/userAbilities"
+        app:layout_constraintBottom_toBottomOf="@+id/userAbilities"
+        app:layout_constraintHorizontal_bias="0.181"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="712dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
