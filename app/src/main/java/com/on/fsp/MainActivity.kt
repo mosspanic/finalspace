@@ -12,10 +12,16 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        val data = Intent(this ,BattonActivity::class.java)
         val butn = findViewById<ImageButton>(R.id.mainActivityButton)
         butn!!.setOnClickListener(View.OnClickListener {
-            val data = Intent(this ,BattonActivity::class.java)
+            //val data = Intent(this ,BattonActivity::class.java)
             startActivity(data)
         })
+        println("###### запуск первой активити")
+       /* suspend { Thread.sleep(6000);   println("###### запуск первой активити after sleep")
+            val data = Intent(this ,BattonActivity::class.java)
+            startActivity(data)
+        }*/
     }
 }

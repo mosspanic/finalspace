@@ -8,6 +8,7 @@
     android:backgroundTint="#CDDC39"
     android:backgroundTintMode="multiply"
     android:theme="@android:style/Theme.Black.NoTitleBar"
+    android:id="@+id/BattonActivity"
     tools:context=".BattonActivity">
 
     <ImageButton

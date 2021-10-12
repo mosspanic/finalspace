@@ -19,7 +19,7 @@ class BattonActivity : AppCompatActivity() {
            // try {
                 if (savedInstanceState == null) {
                     supportFragmentManager.beginTransaction()
-                        .replace(R.id.container, MainFragment.newInstance())
+                        /*.replace*/.add(R.id.BattonActivity, MainFragment.newInstance())
                         .commitNow()
                 }
             /*}catch (exception: Exception) {
