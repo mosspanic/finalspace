@@ -15,8 +15,8 @@ import okhttp3.*
 import com.on.fsp.R
 import com.on.fsp.data.model.User
 import com.on.fsp.utils.Status
-
-class MainFragment : Fragment() {
+//https://www.fandroid.info/15-android-bundle-vs-safeargs/  Урок 15. Передача данных между экранами — пунктами назначения. Android Navigation. Bundle vs Safe Args
+open class MainFragment : Fragment() {
 
     companion object {
         fun newInstance() = MainFragment()

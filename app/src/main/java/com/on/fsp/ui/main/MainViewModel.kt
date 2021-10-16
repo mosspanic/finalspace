@@ -16,6 +16,10 @@ class MainViewModel : ViewModel() {
     fun getUsers() = liveData(Dispatchers.IO) {
         emit(Resource.loading(data = null))
         try {
+            //println("############### apichoice ${com.on.fsp.data.model.ApiChoice.getPath()}")
+            //kotlin.io.println("############### apichoice ${com.on.fsp.data.model.ApiChoice.getPath()}")
+            kotlin.io.println("############### apichoice ${com.on.fsp.data.model.ApiChoice.paths}")
+
             emit(Resource.success(data = mainRepository.getUsers()));   val us= mainRepository.getUsers().size;           println("######### Resource.success $us размер");
 
         } catch (exception: Exception) {

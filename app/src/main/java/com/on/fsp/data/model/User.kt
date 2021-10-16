@@ -1,7 +1,5 @@
 package com.on.fsp.data.model
-
 import com.google.gson.annotations.SerializedName
-
 data class User(
     @SerializedName("img_url")
     val avatar: String,

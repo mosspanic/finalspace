@@ -15,7 +15,7 @@
 
     <fragment
         android:id="@+id/characters"
-        android:name="com.on.fsp.ui.main.MainFragment"
+        android:name="com.on.fsp.ui.main.CharactersFragment"
         android:label="Characters"
         tools:layout="@layout/main_fragment"
 
