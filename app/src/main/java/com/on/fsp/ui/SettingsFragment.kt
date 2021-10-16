@@ -3,12 +3,12 @@ package com.on.fsp.ui.SettingFragment
 import androidx.fragment.app.Fragment
 import com.on.fsp.R
 
-class SettingsFragment: Fragment(R.layout.fragment_haracters){
+class SettingsFragment: Fragment(R.layout.fragment_characters){
     init{
-        println("######################get fragment_haracters")
+        println("######################get fragment_characters")
 
     }
 fun sf1() {
-    println("###################### fun fragment_haracters")
+    println("###################### fun fragment_characters")
 }
 }

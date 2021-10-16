@@ -13,9 +13,9 @@ class BattonActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_batton)
 
-        val butHaracters = findViewById<ImageButton>(R.id.imageButtonHaracters)
-        butHaracters!!.setOnClickListener(View.OnClickListener {
-            println("###### butHaracters")
+        val butCharacters = findViewById<ImageButton>(R.id.imageButtonCharacters)
+        butCharacters!!.setOnClickListener(View.OnClickListener {
+            println("###### butCharacters")
            // try {
                 if (savedInstanceState == null) {
                     supportFragmentManager.beginTransaction()

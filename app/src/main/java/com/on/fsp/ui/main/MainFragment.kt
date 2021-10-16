@@ -32,6 +32,8 @@ class MainFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+
+        println("########## view MainFragment onCreateView")
         val view = inflater.inflate(R.layout.main_fragment, container, false)
 
         view.apply {

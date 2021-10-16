@@ -14,10 +14,10 @@
         />
 
     <fragment
-        android:id="@+id/haracters"
-        android:name="com.on.fsp.ui.SettingFragment.SettingsFragment"
-        android:label="Haracters"
-        tools:layout="@layout/fragment_haracters"
+        android:id="@+id/characters"
+        android:name="com.on.fsp.ui.main.MainFragment"
+        android:label="Characters"
+        tools:layout="@layout/main_fragment"
 
         />
     <fragment
@@ -25,7 +25,7 @@
         android:name="com.on.fsp.ui.SomeFragment.SomeFragment"
         android:label="Locations"
         tools:layout="@layout/fragment_locations"
-
         />
+
 
 </navigation>

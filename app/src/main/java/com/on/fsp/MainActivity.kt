@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
     private val appBarConfiguration by lazy {
         AppBarConfiguration(setOf(
             R.id.home,
-            R.id.haracters,
+            R.id.characters,
             R.id.locations
         ))
     }

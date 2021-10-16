@@ -13,7 +13,7 @@
     tools:context=".BattonActivity">
 
     <ImageButton
-        android:id="@+id/imageButtonHaracters"
+        android:id="@+id/imageButtonCharacters"
         android:layout_width="340dp"
         android:layout_height="200dp"
         android:scaleType="centerCrop"
@@ -31,7 +31,7 @@
         app:layout_constraintBottom_toTopOf="@+id/imageButtonQuotes"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButtonHaracters"
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonCharacters"
         app:srcCompat="@drawable/fslocations2" />
 
     <ImageButton
@@ -54,10 +54,10 @@
         android:textColor="#7FF34E"
         android:textSize="40dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/imageButtonHaracters"
-        app:layout_constraintLeft_toLeftOf="@id/imageButtonHaracters"
-        app:layout_constraintRight_toRightOf="@id/imageButtonHaracters"
-        app:layout_constraintTop_toTopOf="@id/imageButtonHaracters" />
+        app:layout_constraintBottom_toBottomOf="@+id/imageButtonCharacters"
+        app:layout_constraintLeft_toLeftOf="@id/imageButtonCharacters"
+        app:layout_constraintRight_toRightOf="@id/imageButtonCharacters"
+        app:layout_constraintTop_toTopOf="@id/imageButtonCharacters" />
 
     <TextView
         android:id="@+id/buttonTextLocations"
