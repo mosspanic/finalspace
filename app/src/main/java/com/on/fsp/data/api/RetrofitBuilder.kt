@@ -3,9 +3,9 @@ package com.on.fsp.data.api
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-object RetrofitBuilder {
+class RetrofitBuilder(burl: String) {
 
-    private const val BASE_URL = "https://finalspaceapi.com/api/v0/"
+    private val BASE_URL = burl//"https://finalspaceapi.com/api/v0/"
 
     private fun getRetrofit(): Retrofit = Retrofit.Builder()
         .baseUrl(BASE_URL)

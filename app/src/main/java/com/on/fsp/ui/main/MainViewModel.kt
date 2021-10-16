@@ -10,19 +10,16 @@ import com.on.fsp.utils.Resource
 
 class MainViewModel : ViewModel() {
 
-    private val apiHelper = ApiHelper(RetrofitBuilder.apiService)
+    private val apiHelper = ApiHelper(RetrofitBuilder("https://finalspaceapi.com/api/v0/").apiService)
     private val mainRepository: MainRepository = MainRepository(apiHelper)
 
     fun getUsers() = liveData(Dispatchers.IO) {
         emit(Resource.loading(data = null))
         try {
-            emit(Resource.success(data = mainRepository.getUsers()))
-            println("#########Resource.success");   //println("######### ")
-            println("####### $mainRepository.getUsers().size")
+            emit(Resource.success(data = mainRepository.getUsers()));   val us= mainRepository.getUsers().size;           println("######### Resource.success $us размер");
 
         } catch (exception: Exception) {
-            emit(Resource.error(data = null, message = exception.message ?: "Error Occurred!"))
-            println("#########Resource.Exception");
+            emit(Resource.error(data = null, message = exception.message ?: "Error Occurred!"));           println("#########Resource.Exception");
         }
     }
 }
