@@ -5,4 +5,6 @@ import com.on.fsp.data.api.ApiHelper
 class MainRepository(private val apiHelper: ApiHelper) {
 
     suspend fun getUsers() = apiHelper.getUsers()
+    suspend fun getLocations() = apiHelper.getLocations()
+    suspend fun getQuotes() = apiHelper.getQuotes()
 }

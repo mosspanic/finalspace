@@ -22,8 +22,14 @@
         />
     <fragment
         android:id="@+id/locations"
-        android:name="com.on.fsp.ui.SomeFragment.SomeFragment"
+        android:name="com.on.fsp.ui.main.LocationsFragment"
         android:label="Locations"
+        tools:layout="@layout/fragment_locations"
+        />
+    <fragment
+        android:id="@+id/quotes"
+        android:name="com.on.fsp.ui.main.QuotesFragment"
+        android:label="Quotes"
         tools:layout="@layout/fragment_locations"
         />
 

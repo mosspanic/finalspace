@@ -5,6 +5,7 @@ import retrofit2.http.GET
 import retrofit2.http.POST
 import retrofit2.http.Path
 import com.on.fsp.data.model.User
+import com.on.fsp.data.model.Quote
 
 interface ApiService {
 
@@ -18,4 +19,7 @@ interface ApiService {
     suspend fun getLocations(): List<Location>
     @GET("location/{userId}")
     suspend fun getLocation(@Path("locationId") locationId: String): Location
+
+    @GET("quote")
+    suspend fun getQuotes(): List<Quote>
 }
