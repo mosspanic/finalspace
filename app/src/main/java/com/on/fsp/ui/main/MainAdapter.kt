@@ -10,22 +10,28 @@ import com.bumptech.glide.Glide
 import com.on.fsp.R
 import com.on.fsp.data.model.User
 import android.content.Context;
+import androidx.constraintlayout.widget.ConstraintLayout
 
 class MainAdapter(private val users: ArrayList<User>) : RecyclerView.Adapter<MainAdapter.DataViewHolder>() {
-
-    class DataViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    var userCLickListener: UserCLickListener? = null
+    inner class DataViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         fun bind(user: User) {
             itemView.apply {
                 val textViewUserName = this.findViewById<TextView>(R.id.textViewUserName)
                 val textViewUserSpecies = this.findViewById<TextView>(R.id.textViewUserSpecies)
                 val imageViewAvatar = this.findViewById<ImageView>(R.id.imageViewAvatar)
+                val container = this.findViewById<ConstraintLayout>(R.id.lcontainer)
 println("########## $user.name")
                 textViewUserName.text = user.name
                 textViewUserSpecies.text = user.species
                 Glide.with(imageViewAvatar.context)
                     .load(user.avatar)
                     .into(imageViewAvatar)
+
+                container.setOnClickListener {
+                    userCLickListener?.onClick(user.id)
+                }
             }
         }
     }
@@ -46,16 +52,7 @@ println("########## $user.name")
         }
     }
 
-    /*interface OnUserClickListener {
-        fun onUserClick(user: User?, position: Int)
-    }
-
-    private val onClickListener: OnUserClickListener? = null
-
-    fun MainAdapter(context: Context?, users: List<User>, onClickListener: OnUserClickListener?) {
-        this.onClickListener = onClickListener
-
-        this.users = users;
-        this.inflater = LayoutInflater.from(context);
-    }*/
+        fun interface UserCLickListener {
+            fun onClick(id: String)
+        }
 }

@@ -15,6 +15,7 @@ import okhttp3.*
 import com.on.fsp.R
 import com.on.fsp.data.model.User
 import com.on.fsp.utils.Status
+import com.on.fsp.ui.main.userdetails.UserDetailsFragment
 
 class MainFragment : Fragment() {
 
@@ -26,6 +27,18 @@ class MainFragment : Fragment() {
     private lateinit var adapter: MainAdapter
     private lateinit var recyclerView: RecyclerView
     private lateinit var progressBar: ProgressBar
+    private val mainAdapter: MainAdapter by lazy { MainAdapter(arrayListOf()) }
+
+    private val userCLickListener by lazy {
+        MainAdapter.UserCLickListener { id ->
+            val userFragment = UserDetailsFragment()
+            val bundle = Bundle()
+            bundle.putString(UserDetailsFragment.USER_ID, id)
+            userFragment.arguments = bundle
+            requireActivity().supportFragmentManager.beginTransaction()
+                .replace(R.id.container, userFragment, UserDetailsFragment.TAG).addToBackStack("").commit()
+        }
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -58,6 +71,7 @@ class MainFragment : Fragment() {
     }
 
     private fun setupUI() {
+        mainAdapter.userCLickListener = userCLickListener
         recyclerView.layoutManager = LinearLayoutManager(context)
         adapter = MainAdapter(arrayListOf())
         recyclerView.addItemDecoration(
