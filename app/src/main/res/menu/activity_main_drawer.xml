@@ -8,11 +8,19 @@
             android:title="@string/menu_home" />
         <item
             android:id="@+id/characters"
-            android:icon="@drawable/ic_characters"
+            android:icon="@drawable/ic_fscharacters"
             android:title="@string/menu_characters" />
         <item
             android:id="@+id/locations"
-            android:icon="@drawable/ic_locations"
+            android:icon="@drawable/ic_baseline_location_on_24"
             android:title="@string/menu_locations" />
+        <item
+            android:id="@+id/quotes"
+            android:icon="@drawable/ic_fsquotes"
+            android:title="Фразы" />
+        <item
+            android:id="@+id/episodes"
+            android:icon="@drawable/ic_baseline_view_module_24"
+            android:title="Эпизоды" />
 
 </menu>
