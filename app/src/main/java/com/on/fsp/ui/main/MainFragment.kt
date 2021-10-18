@@ -49,7 +49,12 @@ class MainFragment : Fragment() {
 
         println("########## view MainFragment onCreateView")
         val view = inflater.inflate(R.layout.main_fragment, container, false)
-       // val ib = (ImageButton)findViewById(R.id.mainActivityButton)
+
+//скрытие основной картинки
+        /*val v:View = inflater.inflate(R.layout.activity_main); println("####### скрытие основы inflater")
+        val innerView = v.findViewById<ImageButton>(R.id.mainActivityButton);    println("####### скрытие основы findViewById")
+        innerView.setVisibility(View.GONE)*/
+
         view.apply {
             recyclerView = findViewById(R.id.recyclerView)
             progressBar = findViewById(R.id.progressBar)
@@ -108,3 +113,9 @@ class MainFragment : Fragment() {
         }
     }
 }
+/*
+private fun LayoutInflater.inflate(activityMain: Int): View {//функция для скрытия основной картинки
+    println("###t#### скрытие основы")
+return inflate(R.layout.activity_main)
+}
+*/
