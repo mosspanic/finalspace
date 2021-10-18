@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageButton
 import android.widget.ProgressBar
 import android.widget.Toast
 import androidx.fragment.app.Fragment
@@ -36,7 +37,7 @@ class MainFragment : Fragment() {
             bundle.putString(UserDetailsFragment.USER_ID, id)
             userFragment.arguments = bundle
             requireActivity().supportFragmentManager.beginTransaction()
-                .replace(R.id.container, userFragment, UserDetailsFragment.TAG).addToBackStack("").commit()
+                .replace(R.id.MainActivity, userFragment, UserDetailsFragment.TAG).addToBackStack("").commit()
         }
     }
 
@@ -48,7 +49,7 @@ class MainFragment : Fragment() {
 
         println("########## view MainFragment onCreateView")
         val view = inflater.inflate(R.layout.main_fragment, container, false)
-
+       // val ib = (ImageButton)findViewById(R.id.mainActivityButton)
         view.apply {
             recyclerView = findViewById(R.id.recyclerView)
             progressBar = findViewById(R.id.progressBar)
