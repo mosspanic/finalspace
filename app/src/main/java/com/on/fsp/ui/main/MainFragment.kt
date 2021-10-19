@@ -31,13 +31,16 @@ class MainFragment : Fragment() {
     private val mainAdapter: MainAdapter by lazy { MainAdapter(arrayListOf()) }
 
     private val userCLickListener by lazy {
+        print("###### begin userCLickListener ")
         MainAdapter.UserCLickListener { id ->
             val userFragment = UserDetailsFragment()
             val bundle = Bundle()
             bundle.putString(UserDetailsFragment.USER_ID, id)
             userFragment.arguments = bundle
+            print("###### MainAdapter userCLickListener $id")
             requireActivity().supportFragmentManager.beginTransaction()
-                .replace(R.id.MainActivity, userFragment, UserDetailsFragment.TAG).addToBackStack("").commit()
+                .replace(R.id.characters, userFragment, UserDetailsFragment.TAG).addToBackStack("").commit()
+            print("###### MainAdapter end  ")
         }
     }
 
