@@ -8,15 +8,15 @@ import com.on.fsp.data.api.RetrofitBuilder
 import com.on.fsp.data.repository.MainRepository
 import com.on.fsp.utils.Resource
 
-class MainViewModel : ViewModel() {
+class EpisodesViewModel : ViewModel() {
 
     private val apiHelper = ApiHelper(RetrofitBuilder("https://finalspaceapi.com/api/v0/").apiService)
     private val mainRepository: MainRepository = MainRepository(apiHelper)
 
-    fun getUsers() = liveData(Dispatchers.IO) {
+    fun getEpisodes() = liveData(Dispatchers.IO) {
         emit(Resource.loading(data = null))
         try {
-            emit(Resource.success(data = mainRepository.getUsers()));   val us= mainRepository.getUsers().size;           println("######### Resource.success $us размер");
+            emit(Resource.success(data = mainRepository.getEpisodes()));   val us= mainRepository.getEpisodes().size;           println("######### Resource.success $us размер");
 
         } catch (exception: Exception) {
             emit(Resource.error(data = null, message = exception.message ?: "Error Occurred!"));           println("#########Resource.Exception");

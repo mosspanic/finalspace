@@ -8,7 +8,7 @@
     android:theme="@android:style/Theme.Black.NoTitleBar"
     tools:context=".MainActivity">
 
-    <ImageButton
+    <ImageView
         android:id="@+id/mainActivityButton"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

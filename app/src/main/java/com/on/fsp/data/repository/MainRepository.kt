@@ -10,5 +10,5 @@ class MainRepository(private val apiHelper: ApiHelper) {
     suspend fun getUser(id: String)= apiHelper.getUser(id)
     suspend fun getLocations() = apiHelper.getLocations()
     suspend fun getQuotes() = apiHelper.getQuotes()
-
+    suspend fun getEpisodes() = apiHelper.getEpisodes()
 }

@@ -30,7 +30,9 @@ println("########## $user.name")
                     .into(imageViewAvatar)
 
                 container.setOnClickListener {
-                    userCLickListener?.onClick(user.id)
+                    println("###### container.setOnClickListener ${user.id} befor")
+                    userCLickListener?.onClick(user.id);    println("###### container.setOnClickListener after")
+                    
                 }
             }
         }
@@ -52,7 +54,7 @@ println("########## $user.name")
         }
     }
 
-        fun interface UserCLickListener {
+      fun  interface UserCLickListener {
             fun onClick(id: String)
         }
 }

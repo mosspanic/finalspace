@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageButton
 import android.widget.ProgressBar
 import android.widget.Toast
 import androidx.fragment.app.Fragment
@@ -12,38 +11,19 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import okhttp3.*
 import com.on.fsp.R
-import com.on.fsp.data.model.User
 import com.on.fsp.utils.Status
-import com.on.fsp.ui.main.userdetails.UserDetailsFragment
 
-class MainFragment : Fragment() {
+class EpisodesFragment : Fragment() {
 
     companion object {
-        fun newInstance() = MainFragment()
+        fun newInstance() = EpisodesFragment()
     }
 
-    private lateinit var viewModel: MainViewModel
-    private lateinit var adapter: MainAdapter
+    private lateinit var viewModel: EpisodesViewModel
+    private lateinit var adapter: EpisodesAdapter
     private lateinit var recyclerView: RecyclerView
     private lateinit var progressBar: ProgressBar
-    private val mainAdapter: MainAdapter by lazy { MainAdapter(arrayListOf()) }
-
-
-    private val userCLickListener by lazy {
-        print("###### begin userCLickListener ")
-        MainAdapter.UserCLickListener { id ->
-            val userFragment = UserDetailsFragment()
-            val bundle = Bundle()
-            bundle.putString(UserDetailsFragment.USER_ID, id)
-            userFragment.arguments = bundle
-            print("###### MainAdapter userCLickListener $id")
-            requireActivity().supportFragmentManager.beginTransaction()
-                .replace(R.id.characters, userFragment, UserDetailsFragment.TAG).addToBackStack("").commit()
-            print("###### MainAdapter end  ")
-        }
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -51,21 +31,13 @@ class MainFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
 
-        println("########## view MainFragment onCreateView")
+        println("########## view EpisodesFragment onCreateView")
         val view = inflater.inflate(R.layout.main_fragment, container, false)
-
-//скрытие основной картинки
-        /*val v:View = inflater.inflate(R.layout.activity_main); println("####### скрытие основы inflater")
-        val innerView = v.findViewById<ImageButton>(R.id.mainActivityButton);    println("####### скрытие основы findViewById")
-        innerView.setVisibility(View.GONE)*/
 
         view.apply {
             recyclerView = findViewById(R.id.recyclerView)
             progressBar = findViewById(R.id.progressBar)
-            println("########## view MainFragment")
-            //val cont = findViewById(R.id.lcontainer)
-
-            //cont.setOnClickListener(View.OnClickListener {                println("##########view")            })
+            println("########## view EpisodesFragment")
         }
 
         return view
@@ -74,16 +46,15 @@ class MainFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
+        viewModel = ViewModelProvider(this).get(EpisodesViewModel::class.java)
 
         setupUI()
         setupObservers()
     }
 
     private fun setupUI() {
-        mainAdapter.userCLickListener = userCLickListener
         recyclerView.layoutManager = LinearLayoutManager(context)
-        adapter = MainAdapter(arrayListOf())
+        adapter = EpisodesAdapter(arrayListOf())
         recyclerView.addItemDecoration(
             DividerItemDecoration(
                 recyclerView.context,
@@ -94,7 +65,7 @@ class MainFragment : Fragment() {
     }
 
     private fun setupObservers() {
-        viewModel.getUsers().observe(viewLifecycleOwner) { resource ->
+        viewModel.getEpisodes().observe(viewLifecycleOwner) { resource ->
             when (resource.status) {
                 Status.SUCCESS -> {
                     recyclerView.visibility = View.VISIBLE
@@ -117,9 +88,3 @@ class MainFragment : Fragment() {
         }
     }
 }
-/*
-private fun LayoutInflater.inflate(activityMain: Int): View {//функция для скрытия основной картинки
-    println("###t#### скрытие основы")
-return inflate(R.layout.activity_main)
-}
-*/

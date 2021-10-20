@@ -24,14 +24,24 @@
         android:id="@+id/locations"
         android:name="com.on.fsp.ui.main.LocationsFragment"
         android:label="Locations"
-        tools:layout="@layout/fragment_locations"
+        tools:layout="@layout/main_fragment"
         />
     <fragment
         android:id="@+id/quotes"
         android:name="com.on.fsp.ui.main.QuotesFragment"
         android:label="Quotes"
-        tools:layout="@layout/fragment_locations"
+        tools:layout="@layout/main_fragment"
         />
+    <fragment
+        android:id="@+id/episodes"
+        android:name="com.on.fsp.ui.main.EpisodesFragment"
+        android:label="Locations"
+        tools:layout="@layout/main_fragment"
+        />
+    <fragment
+        android:id="@+id/userDetailsFragment"
+        android:name="com.on.fsp.ui.main.userdetails.UserDetailsFragment"
+        android:label="UserDetailsFragment" />
 
 
 </navigation>

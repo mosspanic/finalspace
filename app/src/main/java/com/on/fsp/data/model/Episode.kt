@@ -1,12 +1,10 @@
 package com.on.fsp.data.model
-
 import com.google.gson.annotations.SerializedName
-
-data class User(
+data class Episode (
     @SerializedName("img_url")
     val avatar: String,
-    @SerializedName("species")
-    val species: String,
+    @SerializedName("air_date")
+    val air_date: String,
     @SerializedName("id")
     val id: String,
     @SerializedName("name")
