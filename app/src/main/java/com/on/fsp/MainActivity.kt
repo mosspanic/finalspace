@@ -14,13 +14,7 @@ import com.on.fsp.databinding.ActivityMainBinding
 
 
 class MainActivity : AppCompatActivity() {
-    private val appBarConfiguration by lazy {
-        AppBarConfiguration(setOf(
-            R.id.home,
-            R.id.characters,
-            R.id.locations
-        ))
-    }
+
     private val binding by lazy {        ActivityMainBinding.inflate(layoutInflater)    }
 
     private val navController by lazy {

@@ -16,7 +16,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/finalspace2"
         android:scaleType="fitXY"
         android:contentDescription="finalspace2" />
 
@@ -24,17 +23,17 @@
         android:id="@+id/textView"
         android:layout_width="373dp"
         android:layout_height="152dp"
-        android:text="Фанатам сериала"
+        android:text="КРАЙНИЙ КОСМОС"
         android:textAlignment="center"
-        android:textColor="#E8C3C3"
+        android:textColor="#2196F3"
         android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.421"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.078" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/navigationView"
